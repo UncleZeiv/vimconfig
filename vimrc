@@ -6,7 +6,12 @@ if g:is_work
 endif
 
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+if has("win32")
+	set rtp+=~/vimfiles/bundle/vundle/
+	set guifont=Consolas\ for\ Powerline\ FixedD:h11
+else
+	set rtp+=~/.vim/bundle/vundle/
+endif
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
@@ -34,7 +39,11 @@ Bundle 'ctrlp.vim'
 
 " pretty statusline
 if has("gui_running")
-	let g:Powerline_symbols='unicode'
+	if has("win32")
+		let g:Powerline_symbols='fancy'
+	else
+		let g:Powerline_symbols='unicode'
+	endif
 endif
 Bundle 'Lokaltog/vim-powerline'
 
@@ -62,12 +71,17 @@ set backspace=indent,eol,start
 " set completeopt=menu,preview,longest
 
 " ripiglia da qui
-"
-set clipboard+=\\\\|xterm
+if ! has("win32")
+	set clipboard+=\\\\|xterm
+endif
 
 " set cursorcolumn
 set cursorline
-set directory=/user_data/.tmp//
+if g:is_work
+	set directory=/user_data/.tmp//
+else
+	set directory=$HOME/vimtmp
+endif
 set encoding=utf-8
 " set foldlevelstart=99
 set foldlevel=99
@@ -87,7 +101,9 @@ set linebreak
 set mouse=ar
 set mousemodel=popup_setpos
 set number
-set path=.,..,/usr/include/,/tools/SITE/rnd/include,/tools/SITE/include,,
+if g:is_work
+	set path=.,..,/usr/include/,/tools/SITE/rnd/include,/tools/SITE/include,,
+endif
 set ruler
 set scrolloff=10
 set showcmd
@@ -98,12 +114,14 @@ set suffixes-=.h
 set suffixesadd+=
 " set tabpagemax=50
 " set tags=./tags
-set tags+=/
-set tags+=~/.ctags.d/cpp
-set tags+=~/.ctags.d/gl
-set tags+=~/.ctags.d/maya2011
-set tags+=~/.ctags.d/dneg
-set tags+=~/.ctags.d/dnex
+if g:is_work
+	set tags+=/
+	set tags+=~/.ctags.d/cpp
+	set tags+=~/.ctags.d/gl
+	set tags+=~/.ctags.d/maya2011
+	set tags+=~/.ctags.d/dneg
+	set tags+=~/.ctags.d/dnex
+endif
 " set textwidth=79
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*  " Linux/MacOSX
 set wildignore+=*.o,*.swp,*.pyc,*.so,*.a,*.os
