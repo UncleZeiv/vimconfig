@@ -1,0 +1,80 @@
+ResetSnippets()
+# std::map
+snippet map
+	std::map< ${1:key}, ${2:value} > ${3};
+# std::vector
+snippet vec
+	std::vector< ${1:char} > ${2};
+# Namespace
+snippet ns
+	namespace ${1:`Filename('', 'my')`}
+	{
+		${2}
+	} /* end namespace $1 */
+# Empty namespace
+snippet ens
+	namespace
+	{
+		${2}
+	}${1: /* end empty namespace */}
+# Class
+snippet cl
+	class ${1:`Filename('$1_t', 'name')`}
+	{
+	public:
+		$1 (${2:arguments});
+		virtual ~$1 ();
+	
+	private:
+		${3:/* data */}
+	};
+# cout
+snippet cout
+	std::cout << ${1} << ${2:"\n"};
+# cerr
+snippet cerr
+	std::cerr << ${1} << ${2:std::endl};
+# dv debug
+snippet dv
+	std::cerr << "dv-debug: " << __FILE__ << " (" << __LINE__ << ") " <<
+		${1} << ${2:std::endl};
+snippet met
+	${1} ${2:class}::${3:method}( ${4} )
+	{
+		${5:/* code */}
+	}
+snippet sha
+	boost::shared_ptr< ${1} > ${2}
+snippet costr
+	const std::string & ${1}
+snippet pca
+	${1:ClassName}( const $1& );
+	$1& operator=( const $1& );
+snippet gets
+	inline void set$2( ${1:bool} ${2:} )
+	{
+		m_$2 = $2;
+	}
+	
+	inline $1 $2() const
+	{
+		return m_$2;
+	}
+snippet cgets
+	void ${1:`Filename('$1', 'name')`}::set${4}$3( ${2:bool} ${3:} )
+	{
+		m_$3 = $3;
+	}
+
+
+	$2 $1::$3() const
+	{
+		return m_$3;
+	}
+
+
+	void set$3( $2 $3 );
+	$2 $3() const;
+snippet va
+	" - ${1:varName}: '" << $1 << "'" << std::endl${2: <<}
+

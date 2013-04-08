@@ -1,0 +1,12 @@
+# Global snippets
+
+# (c) holds no legal value ;)
+snippet c)
+	`&enc[:2] == "utf" ? "©" : "(c)"` Copyright `strftime("%Y")` ${1:`g:snips_author`}. All Rights Reserved.${2}
+snippet date
+	`strftime("%Y-%m-%d")`
+snippet vers
+	${1:LIBNAME}_VERSION_MAJOR = ${2:1}
+	$1_VERSION_MINOR = ${3:0}
+	$1_VERSION_PATCH = ${4:0}
+
