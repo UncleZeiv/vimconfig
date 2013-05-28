@@ -55,6 +55,8 @@ Bundle 'Align'
 
 Bundle 'linediff.vim'
 
+Bundle 'ZoomWin'
+
 " Bundle 'UncleZeiv/minibufexpl.vim'
 
 " indent options
