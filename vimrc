@@ -33,6 +33,8 @@ Bundle 'surround.vim'
 " Bundle 'Syntastic'
 
 " file search plugin
+let g:ctrlp_extensions = ['buffertag', 'tag', 'changes', 'mixed']
+let g:ctrlp_custom_ignore = '*/.git/*,*/.hg/*,*/.svn/*'
 let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_working_path_mode = 0
 Bundle 'ctrlp.vim'
@@ -123,7 +125,6 @@ if g:is_work
 	set tags+=~/.ctags.d/dnex
 endif
 " set textwidth=79
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*  " Linux/MacOSX
 set wildignore+=*.o,*.swp,*.pyc,*.so,*.a,*.os
 " set wildmenu
 " set wildmode=longest:full,full
@@ -131,8 +132,6 @@ set wildignore+=*.o,*.swp,*.pyc,*.so,*.a,*.os
 syntax enable
 filetype plugin on
 filetype plugin indent on
-
-let g:ctrlp_extensions = ['buffertag', 'tag', 'changes', 'mixed']
 
 " search in currently selected visual area
 vnoremap g/ /\%V
