@@ -54,6 +54,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'Align'
 
 Bundle 'linediff.vim'
+vnoremap <F6> :Linediff<CR>
 
 Bundle 'ZoomWin'
 
