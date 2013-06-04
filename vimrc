@@ -20,9 +20,15 @@ Bundle 'gmarik/vundle'
 Bundle 'a.vim'
 
 " complete snippets
-Bundle 'tlib'
-Bundle 'vim-addon-mw-utils'
-Bundle 'garbas/vim-snipmate'
+" imap <C-E> <Plug>snipMateNextOrTrigger
+" Bundle 'tlib'
+" Bundle 'vim-addon-mw-utils'
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetDirectories=["snippets"]
+" Bundle 'garbas/vim-snipmate'
+Bundle 'SirVer/ultisnips'
 
 " git plugin
 Bundle 'fugitive.vim'
