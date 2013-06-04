@@ -57,6 +57,16 @@ Bundle 'linediff.vim'
 
 Bundle 'ZoomWin'
 
+if ! has("win32")
+	" let g:ycm_filetype_blacklist = {'notes': 1, 'markdown': 1, 'text': 1}
+	if g:is_work
+		let g:ycm_extra_conf_globlist=['~/dev/*', '/u/dv/dev/*']
+	endif
+	let g:ycm_confirm_extra_conf = 0
+	let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
+	Bundle 'Valloric/YouCompleteMe'
+endif
+
 " Bundle 'UncleZeiv/minibufexpl.vim'
 
 " indent options
