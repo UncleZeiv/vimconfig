@@ -188,4 +188,5 @@ let g:miniBufExplMaxSize = 40
 " let g:miniBufExplForceSyntaxEnable = 1
 let g:miniBufExplorerDebugMode = 0
 
-vnoremap <F6> :Linediff<CR>
+" TODO: missing glsl filetype
+autocmd BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setfiletype glsl
