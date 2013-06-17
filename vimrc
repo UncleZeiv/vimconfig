@@ -1,3 +1,4 @@
+set nocompatible
 let g:is_work = $DN_SITE != ''
 
 if g:is_work
