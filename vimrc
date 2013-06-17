@@ -36,7 +36,7 @@ Bundle 'fugitive.vim'
 Bundle 'surround.vim'
 
 " syntax check plugin
-" Bundle 'Syntastic'
+Bundle 'scrooloose/syntastic'
 
 " file search plugin
 let g:ctrlp_extensions = ['buffertag', 'tag', 'changes', 'mixed']
