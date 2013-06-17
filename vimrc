@@ -76,6 +76,8 @@ endif
 
 " Bundle 'UncleZeiv/minibufexpl.vim'
 
+Bundle 'kshenoy/vim-signature'
+
 " indent options
 " set autoindent
 " set smartindent
