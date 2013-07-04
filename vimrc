@@ -9,13 +9,11 @@ endif
 filetype off
 if has("win32")
 	set rtp+=~/vimfiles/bundle/vundle/
-	set guifont=Consolas\ for\ Powerline\ FixedD:h11
-	autocmd GUIEnter * simalt ~x "maximize
-	cd ~
+	call vundle#rc("~/vimfiles/bundle")
 else
 	set rtp+=~/.vim/bundle/vundle/
+	call vundle#rc()
 endif
-call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
@@ -202,3 +200,16 @@ let g:miniBufExplorerDebugMode = 0
 
 " TODO: missing glsl filetype
 autocmd BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setfiletype glsl
+
+" special settings for windows
+if has("win32")
+	" better fonts, download from github.com/eugeneching/consolas-powerline-vim
+	set guifont=Consolas\ for\ Powerline\ FixedD:h11
+
+	" maximise on entry
+	autocmd GUIEnter * simalt ~x "maximize
+
+	" cd to home, when run from start it would otherwise default to the Vim 
+	" install directory...
+	cd ~
+endif
