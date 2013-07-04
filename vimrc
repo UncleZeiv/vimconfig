@@ -10,6 +10,8 @@ filetype off
 if has("win32")
 	set rtp+=~/vimfiles/bundle/vundle/
 	set guifont=Consolas\ for\ Powerline\ FixedD:h11
+	autocmd GUIEnter * simalt ~x "maximize
+	cd ~
 else
 	set rtp+=~/.vim/bundle/vundle/
 endif
