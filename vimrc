@@ -40,7 +40,7 @@ Bundle 'surround.vim'
 Bundle 'scrooloose/syntastic'
 
 " file search plugin
-let g:ctrlp_extensions = ['buffertag', 'tag', 'changes', 'mixed']
+let g:ctrlp_extensions = ['mixed']
 let g:ctrlp_custom_ignore = '*/.git/*,*/.hg/*,*/.svn/*'
 let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_working_path_mode = 0
