@@ -147,6 +147,7 @@ if g:is_work
 	set tags+=~/.ctags.d/dnex
 endif
 " set textwidth=79
+set updatetime=500
 set wildignore+=*.o,*.swp,*.pyc,*.so,*.a,*.os
 " set wildmenu
 " set wildmode=longest:full,full
