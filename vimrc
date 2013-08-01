@@ -44,6 +44,8 @@ let g:ctrlp_extensions = ['mixed']
 let g:ctrlp_custom_ignore = '*/.git/*,*/.hg/*,*/.svn/*'
 let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_use_caching = 1
+let g:ctrlp_clear_cache_on_exit = 0
 Bundle 'ctrlp.vim'
 
 " pretty statusline
