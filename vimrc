@@ -105,8 +105,10 @@ endif
 set cursorline
 if g:is_work
 	set directory=/user_data/.tmp//
+	set undodir=/user_data/.tmp//
 else
 	set directory=$HOME/vimtmp
+	set undodir=$HOME/vimtmp
 endif
 set encoding=utf-8
 " set foldlevelstart=99
@@ -149,6 +151,7 @@ if g:is_work
 	set tags+=~/.ctags.d/dnex
 endif
 " set textwidth=79
+set undofile
 set updatetime=500
 set wildignore+=*.o,*.swp,*.pyc,*.so,*.a,*.os
 " set wildmenu
