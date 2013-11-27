@@ -81,6 +81,9 @@ endif
 
 Bundle 'kshenoy/vim-signature'
 
+Bundle 'IndentConsistencyCop'
+Bundle 'IndentConsistencyCopAutoCmds'
+
 Bundle 'vim-multiple-cursors'
 
 " indent options
