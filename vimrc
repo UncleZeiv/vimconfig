@@ -18,6 +18,7 @@ endif
 Bundle 'gmarik/vundle'
 
 " alternate to related file
+let g:alternateExtensions_C = "H,h"
 Bundle 'a.vim'
 
 " complete snippets
