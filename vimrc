@@ -88,6 +88,8 @@ Bundle 'IndentConsistencyCopAutoCmds'
 
 Bundle 'vim-multiple-cursors'
 
+Bundle 'fabric-engine/kl.vim'
+
 " indent options
 " set autoindent
 " set smartindent
