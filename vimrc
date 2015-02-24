@@ -227,4 +227,6 @@ if has("win32")
 	" cd to home, when run from start it would otherwise default to the Vim 
 	" install directory...
 	cd ~
+else
+	autocmd GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
 endif
