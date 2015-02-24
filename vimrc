@@ -82,6 +82,7 @@ endif
 
 Bundle 'kshenoy/vim-signature'
 
+Bundle 'ingo-library'
 Bundle 'IndentConsistencyCop'
 Bundle 'IndentConsistencyCopAutoCmds'
 
