@@ -15,30 +15,30 @@ else
 	call vundle#rc()
 endif
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " alternate to related file
 let g:alternateExtensions_C = "H,h"
-Bundle 'a.vim'
+Plugin 'a.vim'
 
 " complete snippets
 " imap <C-E> <Plug>snipMateNextOrTrigger
-" Bundle 'tlib'
-" Bundle 'vim-addon-mw-utils'
+" Plugin 'tlib'
+" Plugin 'vim-addon-mw-utils'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsSnippetDirectories=["ultisnippets"]
-" Bundle 'garbas/vim-snipmate'
-Bundle 'SirVer/ultisnips'
+" Plugin 'garbas/vim-snipmate'
+Plugin 'SirVer/ultisnips'
 
 " git plugin
-Bundle 'fugitive.vim'
+Plugin 'fugitive.vim'
 
-Bundle 'surround.vim'
+Plugin 'surround.vim'
 
 " syntax check plugin
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
 " file search plugin
 let g:ctrlp_extensions = ['mixed']
@@ -47,7 +47,7 @@ let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 0
-Bundle 'ctrlp.vim'
+Plugin 'ctrlp.vim'
 
 " pretty statusline
 if has("gui_running")
@@ -57,16 +57,16 @@ if has("gui_running")
 		let g:Powerline_symbols='unicode'
 	endif
 endif
-Bundle 'Lokaltog/vim-powerline'
+Plugin 'Lokaltog/vim-powerline'
 
-Bundle 'mileszs/ack.vim'
+Plugin 'mileszs/ack.vim'
 
-Bundle 'Align'
+Plugin 'Align'
 
-Bundle 'linediff.vim'
+Plugin 'linediff.vim'
 vnoremap <F6> :Linediff<CR>
 
-Bundle 'ZoomWin'
+Plugin 'ZoomWin'
 
 if ! has("win32")
 	" let g:ycm_filetype_blacklist = {'notes': 1, 'markdown': 1, 'text': 1}
@@ -75,27 +75,27 @@ if ! has("win32")
 	endif
 	let g:ycm_confirm_extra_conf = 0
 	let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
-	Bundle 'Valloric/YouCompleteMe'
+	Plugin 'Valloric/YouCompleteMe'
 endif
 
-" Bundle 'UncleZeiv/minibufexpl.vim'
+" Plugin 'UncleZeiv/minibufexpl.vim'
 
-Bundle 'kshenoy/vim-signature'
+Plugin 'kshenoy/vim-signature'
 
-Bundle 'ingo-library'
-Bundle 'IndentConsistencyCop'
-Bundle 'IndentConsistencyCopAutoCmds'
+Plugin 'ingo-library'
+Plugin 'IndentConsistencyCop'
+Plugin 'IndentConsistencyCopAutoCmds'
 
-Bundle 'vim-multiple-cursors'
+Plugin 'vim-multiple-cursors'
 
-Bundle 'fabric-engine/kl.vim'
+Plugin 'fabric-engine/kl.vim'
 
 " indent options
 " set autoindent
 " set smartindent
 set noexpandtab
 set shiftwidth=4
-set smarttab
+" set smarttab
 set tabstop=4
 " set cindent
 set cinoptions=:0,g0,(1s,
