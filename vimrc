@@ -116,8 +116,8 @@ if g:is_work
 	set directory=/user_data/.tmp//
 	set undodir=/user_data/.tmp//
 else
-	set directory=$HOME/vimtmp
-	set undodir=$HOME/vimtmp
+	set directory=$HOME/vimtmp//
+	set undodir=$HOME/vimtmp//
 endif
 set encoding=utf-8
 " set foldlevelstart=99
