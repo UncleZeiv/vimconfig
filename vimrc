@@ -90,6 +90,8 @@ Plugin 'vim-multiple-cursors'
 
 Plugin 'fabric-engine/kl.vim'
 
+Plugin 'tmhedberg/SimpylFold'
+
 " indent options
 " set autoindent
 " set smartindent
