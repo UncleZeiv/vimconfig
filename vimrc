@@ -30,7 +30,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsSnippetDirectories=["ultisnippets"]
 " Plugin 'garbas/vim-snipmate'
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 
 " git plugin
 Plugin 'fugitive.vim'
