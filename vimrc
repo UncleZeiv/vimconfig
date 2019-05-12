@@ -19,7 +19,7 @@ let g:UltiSnipsSnippetDirectories=["ultisnippets"]
 " Plug 'SirVer/ultisnips'
 
 " git plugin
-Plug 'vim-scripts/fugitive.vim'
+" Plug 'vim-scripts/fugitive.vim'
 
 Plug 'vim-scripts/surround.vim'
 
@@ -47,12 +47,12 @@ Plug 'Lokaltog/vim-powerline'
 
 Plug 'mileszs/ack.vim'
 
-Plug 'vim-scripts/Align'
+" Plug 'vim-scripts/Align'
 
 Plug 'vim-scripts/linediff.vim'
 vnoremap <F6> :Linediff<CR>
 
-Plug 'vim-scripts/ZoomWin'
+" Plug 'vim-scripts/ZoomWin'
 
 if ! has("win32")
 	" let g:ycm_filetype_blacklist = {'notes': 1, 'markdown': 1, 'text': 1}
@@ -62,18 +62,14 @@ if ! has("win32")
 endif
 
 " Plug 'UncleZeiv/minibufexpl.vim'
+" Plug 'kshenoy/vim-signature'
 
-Plug 'kshenoy/vim-signature'
+" Plug 'vim-scripts/ingo-library'
+" Plug 'vim-scripts/IndentConsistencyCop'
+" Plug 'vim-scripts/IndentConsistencyCopAutoCmds'
+" Plug 'vim-scripts/vim-multiple-cursors'
 
-Plug 'vim-scripts/ingo-library'
-Plug 'vim-scripts/IndentConsistencyCop'
-Plug 'vim-scripts/IndentConsistencyCopAutoCmds'
-
-Plug 'vim-scripts/vim-multiple-cursors'
-
-" Plug 'fabric-engine/kl.vim'
-
-Plug 'tmhedberg/SimpylFold'
+" Plug 'tmhedberg/SimpylFold'
 
 " indent options
 " set autoindent
@@ -166,7 +162,7 @@ nnoremap F :exe "Ack -w \"" . expand("<cword>") . "\""<CR>
 let g:kerid_defineMappings=1
 
 " close curly braces
-imap {<cr> {<cr>}<esc>kA<cr>
+" imap {<cr> {<cr>}<esc>kA<cr>
 
 " Minibuffer explorer options
 let g:miniBufExplVSplit = 30
