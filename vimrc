@@ -1,10 +1,4 @@
 set nocompatible
-let g:is_work = $DN_SITE != ''
-
-if g:is_work
-	" work related: use this to avoid tcsh startup
-	set shell=sh
-endif
 
 filetype off
 if has("win32")
@@ -70,9 +64,6 @@ Plugin 'ZoomWin'
 
 if ! has("win32")
 	" let g:ycm_filetype_blacklist = {'notes': 1, 'markdown': 1, 'text': 1}
-	if g:is_work
-		let g:ycm_extra_conf_globlist=['~/dev/*', '/u/dv/dev/*']
-	endif
 	let g:ycm_confirm_extra_conf = 0
 	let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 	Plugin 'Valloric/YouCompleteMe'
@@ -114,13 +105,8 @@ endif
 
 " set cursorcolumn
 set cursorline
-if g:is_work
-	set directory=/user_data/.tmp//
-	set undodir=/user_data/.tmp//
-else
-	set directory=$HOME/vimtmp//
-	set undodir=$HOME/vimtmp//
-endif
+set directory=$HOME/vimtmp//
+set undodir=$HOME/vimtmp//
 set encoding=utf-8
 " set foldlevelstart=99
 set foldlevel=99
@@ -140,9 +126,6 @@ set linebreak
 set mouse=ar
 set mousemodel=popup_setpos
 set number
-if g:is_work
-	set path=.,..,/usr/include/,/tools/SITE/rnd/include,/tools/SITE/include,,
-endif
 set ruler
 set scrolloff=10
 set showcmd
@@ -153,14 +136,6 @@ set suffixes-=.h
 set suffixesadd+=
 " set tabpagemax=50
 " set tags=./tags
-if g:is_work
-	set tags+=/
-	set tags+=~/.ctags.d/cpp
-	set tags+=~/.ctags.d/gl
-	set tags+=~/.ctags.d/maya2011
-	set tags+=~/.ctags.d/dneg
-	set tags+=~/.ctags.d/dnex
-endif
 " set textwidth=79
 set undofile
 set updatetime=500
