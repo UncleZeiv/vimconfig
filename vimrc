@@ -88,7 +88,7 @@ Plugin 'IndentConsistencyCopAutoCmds'
 
 Plugin 'vim-multiple-cursors'
 
-Plugin 'fabric-engine/kl.vim'
+" Plugin 'fabric-engine/kl.vim'
 
 Plugin 'tmhedberg/SimpylFold'
 
