@@ -1,38 +1,30 @@
 set nocompatible
-
 filetype off
-if has("win32")
-	set rtp+=~/vimfiles/bundle/vundle/
-	call vundle#rc("~/vimfiles/bundle")
-else
-	set rtp+=~/.vim/bundle/vundle/
-	call vundle#rc()
-endif
 
-Plugin 'gmarik/vundle'
+call plug#begin("~/vimfiles/plugged")
 
 " alternate to related file
 let g:alternateExtensions_C = "H,h"
-Plugin 'a.vim'
+Plug 'vim-scripts/a.vim'
 
 " complete snippets
 " imap <C-E> <Plug>snipMateNextOrTrigger
-" Plugin 'tlib'
-" Plugin 'vim-addon-mw-utils'
+" Plug 'vim-scripts/tlib'
+" Plug 'vim-scripts/vim-addon-mw-utils'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsSnippetDirectories=["ultisnippets"]
-" Plugin 'garbas/vim-snipmate'
-" Plugin 'SirVer/ultisnips'
+" Plug 'vim-scripts/garbas/vim-snipmate'
+" Plug 'SirVer/ultisnips'
 
 " git plugin
-Plugin 'fugitive.vim'
+Plug 'vim-scripts/fugitive.vim'
 
-Plugin 'surround.vim'
+Plug 'vim-scripts/surround.vim'
 
 " syntax check plugin
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 " file search plugin
 let g:ctrlp_extensions = ['mixed']
@@ -41,7 +33,7 @@ let g:ctrlp_cmd = 'CtrlPLastMode'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 0
-Plugin 'ctrlp.vim'
+Plug 'vim-scripts/ctrlp.vim'
 
 " pretty statusline
 if has("gui_running")
@@ -51,37 +43,37 @@ if has("gui_running")
 		let g:Powerline_symbols='unicode'
 	endif
 endif
-Plugin 'Lokaltog/vim-powerline'
+Plug 'Lokaltog/vim-powerline'
 
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
-Plugin 'Align'
+Plug 'vim-scripts/Align'
 
-Plugin 'linediff.vim'
+Plug 'vim-scripts/linediff.vim'
 vnoremap <F6> :Linediff<CR>
 
-Plugin 'ZoomWin'
+Plug 'vim-scripts/ZoomWin'
 
 if ! has("win32")
 	" let g:ycm_filetype_blacklist = {'notes': 1, 'markdown': 1, 'text': 1}
 	let g:ycm_confirm_extra_conf = 0
 	let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
-	Plugin 'Valloric/YouCompleteMe'
+	Plug 'Valloric/YouCompleteMe'
 endif
 
-" Plugin 'UncleZeiv/minibufexpl.vim'
+" Plug 'UncleZeiv/minibufexpl.vim'
 
-Plugin 'kshenoy/vim-signature'
+Plug 'kshenoy/vim-signature'
 
-Plugin 'ingo-library'
-Plugin 'IndentConsistencyCop'
-Plugin 'IndentConsistencyCopAutoCmds'
+Plug 'vim-scripts/ingo-library'
+Plug 'vim-scripts/IndentConsistencyCop'
+Plug 'vim-scripts/IndentConsistencyCopAutoCmds'
 
-Plugin 'vim-multiple-cursors'
+Plug 'vim-scripts/vim-multiple-cursors'
 
-" Plugin 'fabric-engine/kl.vim'
+" Plug 'fabric-engine/kl.vim'
 
-Plugin 'tmhedberg/SimpylFold'
+Plug 'tmhedberg/SimpylFold'
 
 " indent options
 " set autoindent
