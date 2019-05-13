@@ -192,3 +192,6 @@ if has("win32")
 else
 	autocmd GUIEnter * call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
 endif
+
+" Initialize plugin system
+call plug#end()
